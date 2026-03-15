@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini CRM Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Mini CRM</h1>
+
+<div class="card">
+
+<h2>+ New Lead</h2>
+
+<div class="form">
+
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+
+<input id="company" placeholder="Company">
+<input id="value" type="number" placeholder="Value ($)">
+
+<select id="source">
+<option>Website</option>
+<option>Referral</option>
+<option>LinkedIn</option>
+<option>Cold Email</option>
+</select>
+
+<button onclick="addLead()">Add Lead</button>
+
+</div>
+
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+
+<input id="searchInput" placeholder="Search Lead">
+<button onclick="searchLead()">Search</button>
+<button onclick="renderLeads()">Show All</button>
+
+</div>
+
+<h2>Leads</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Company</th>
+<th>Status</th>
+<th>Value</th>
+<th>Source</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="leadList"></tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
